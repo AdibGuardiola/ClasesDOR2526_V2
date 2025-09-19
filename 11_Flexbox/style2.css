@@ -1,0 +1,35 @@
+.flex-container {
+  display: flex;
+  flex-direction: row;   /* en fila horizontal */
+  flex-wrap: wrap;       /* que salten a otra línea si no caben */
+  justify-content: space-between;
+  gap: 10px;
+  border: 2px solid #333;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.flex-container div {
+  width: 200px;           /* 👈 ancho fijo = columna delgada */
+  height: 500px;         /* 👈 altura fija */
+  text-align: center;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+  line-height: 200px;    /* centrar vertical el texto */
+}
+/* ======================= 3. Colores para diferenciar ==================== */
+.flex-container div:nth-child(1)  { background-color: #e53935; } /* rojo */
+.flex-container div:nth-child(2)  { background-color: #d81b60; } /* rosa */
+.flex-container div:nth-child(3)  { background-color: #8e24aa; } /* morado */
+.flex-container div:nth-child(4)  { background-color: #5e35b1; } /* violeta */
+.flex-container div:nth-child(5)  { background-color: #3949ab; } /* azul */
+.flex-container div:nth-child(6)  { background-color: #1e88e5; } /* celeste */
+.flex-container div:nth-child(7)  { background-color: #00acc1; } /* turquesa */
+.flex-container div:nth-child(8)  { background-color: #43a047; } /* verde */
+.flex-container div:nth-child(9)  { background-color: #fdd835; color:#000; } /* amarillo */
+.flex-container div:nth-child(10) { background-color: #fb8c00; } /* naranja */
+
+
+
+

@@ -1,0 +1,72 @@
+/* 0 → la sombra no se mueve a la izquierda ni a la derecha.
+
+3px → la sombra se mueve 3px hacia abajo.
+
+6px → la sombra se difumina, haciendo un borde suave.
+
+rgba(6, 0, 0, 0.1) → color de la sombra:
+
+r=6, g=0, b=0 → casi negro.
+
+a=0.1 → opacidad del 10% (muy sutil y transparente). */
+/* styles.css */
+body {
+  font-family: 'Open Sans', Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* Título */
+h1 {
+  text-align: center;
+  margin: 20px 0;
+  color: #333;
+  font-size: 2.5rem;
+}
+
+/* Contenedor flex */
+.flex-container {
+  display: flex;
+  flex-direction: row;         /* Muestra las cajas de derecha a izquierda */
+  justify-content: flex-start;           /* Las alinea al borde derecho */
+  align-items: flex-end;
+  flex-wrap: wrap;                     /* Evita desbordes */
+  gap: 30px;                           /* Separación entre cajas */
+  padding: 30px;
+  margin: 50px;
+  background-color: rgba(65, 9, 9, 0.8);
+  border-radius: 15px;
+  transition: background-color 0.9s ease;
+}
+
+.flex-container:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+/* Cajas */
+.flex-container div {
+  /* Tamaño controlado: incluye padding en el total */
+  box-sizing: border-box;
+  width: 160px;
+  height: 160px;
+  padding: 16px;
+
+  background: #74ebd5;
+  color: #111;
+  border-radius: 10px;
+  box-shadow: 20px 3px 6px rgba(6, 0, 0, 0.1);
+
+  /* Centrado perfecto del texto */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  transition: background-color 0.9s ease, transform 0.2s ease;
+}
+
+/* OJO: sin espacio antes de :hover */
+.flex-container div:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,37 @@
+/* :nth-child(an + b)
+a → cuántos elementos hay por ciclo.
+
+n → contador interno (0, 1, 2, 3, …) que pone el navegador.
+
+b → desplazamiento (por cuál hijo empezar). */
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;        /* Permite saltar de línea */
+  justify-content: center;
+  gap: 10px;
+  border: 2px solid #333;
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+.flex-container div {
+  flex: 0 0 calc(10% - 10px); /* 👈 10 cajas por fila (100% / 10 = 10%) */
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 8px;
+}
+.flex-container div:nth-child(10n+1) { background: #e53935; }
+.flex-container div:nth-child(10n+2) { background: #d81b60; }
+.flex-container div:nth-child(10n+3) { background: #8e24aa; }
+.flex-container div:nth-child(10n+4) { background: #5e35b1; }
+.flex-container div:nth-child(10n+5) { background: #3949ab; }
+.flex-container div:nth-child(10n+6) { background: #1e88e5; }
+.flex-container div:nth-child(10n+7) { background: #00acc1; }
+.flex-container div:nth-child(10n+8) { background: #43a047; }
+.flex-container div:nth-child(10n+9) { background: #fdd835; color:#000; }
+.flex-container div:nth-child(10n+10){ background: #fb8c00; }

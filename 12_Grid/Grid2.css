@@ -1,0 +1,48 @@
+.grid-container {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px; /* izquierda | centro | derecha */
+  grid-template-rows: 100px 1fr 100px;    /* header | contenido | footer */
+  grid-template-areas:
+    "header  header  header"
+    "left    main    right"
+    "footer  footer  footer";
+  height: 100vh;
+  gap: 20px;
+}
+
+.header {
+  grid-area: header;
+  background-color: #f39c12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+.left-sidebar {
+  grid-area: left;
+  background-color: #2ecc71; /* verde */
+}
+
+.right-sidebar {
+  grid-area: right;
+  background-color: #2ecc71; /* verde */
+}
+
+.main {
+  grid-area: main;
+  background-color: #db3445;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #f39c12;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
